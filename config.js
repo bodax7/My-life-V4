@@ -5,5 +5,5 @@ window.MYLIFE_CONFIG = {
   SUPABASE_URL: 'https://rdvjurxtkcetzifgtylv.supabase.co',      // مثال: https://abcdxyz.supabase.co
   SUPABASE_ANON_KEY: 'sb_publishable__3e5sU6E1GJypHx0K5Jsrg_VhLzzYkg',   // المفتاح العام anon
   // المفتاح العام لإشعارات الموبايل (VAPID public key) — يُضاف في المرحلة ٧
-  VAPID_PUBLIC_KEY: '',
+  VAPID_PUBLIC_KEY: 'BEiaGkhYFj8EkKeS47FyblRdjiG9uvqb2LpsMHdQzDUlpeE7qspqucFyqfwU5__mR8yyt6ymPmJosncwPu1T12w',
 };
