@@ -1,6 +1,6 @@
 // عامل الخدمة: يحفظ ملفات التطبيق للعمل بدون إنترنت.
 // ⚠️ غيّر رقم الإصدار مع كل تحديث لملفات الواجهة حتى يحصل المستخدمون على النسخة الجديدة.
-const VERSION = 'mylife-v1.0.0';
+const VERSION = 'mylife-v1.1.0';
 const SHELL = ['./', 'index.html', 'config.js', 'manifest.webmanifest', 'icon.svg', 'icon-192.png', 'icon-512.png'];
 
 self.addEventListener('install', (e) => {
