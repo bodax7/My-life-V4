@@ -52,5 +52,59 @@
         }
       ]
     }
-  }
+  },
+  "shortcuts": [
+    {
+      "name": "مصروف جديد",
+      "short_name": "مصروف",
+      "url": "./#/quick?a=expense",
+      "icons": [
+        {
+          "src": "sc-expense.png",
+          "sizes": "192x192",
+          "type": "image/png",
+          "purpose": "any"
+        }
+      ]
+    },
+    {
+      "name": "دخل جديد",
+      "short_name": "دخل",
+      "url": "./#/quick?a=income",
+      "icons": [
+        {
+          "src": "sc-income.png",
+          "sizes": "192x192",
+          "type": "image/png",
+          "purpose": "any"
+        }
+      ]
+    },
+    {
+      "name": "ملاحظة جديدة",
+      "short_name": "ملاحظة",
+      "url": "./#/quick?a=note",
+      "icons": [
+        {
+          "src": "sc-note.png",
+          "sizes": "192x192",
+          "type": "image/png",
+          "purpose": "any"
+        }
+      ]
+    },
+    {
+      "name": "الآلة الحاسبة",
+      "short_name": "الحاسبة",
+      "url": "./#/quick?a=calc",
+      "icons": [
+        {
+          "src": "sc-calc.png",
+          "sizes": "192x192",
+          "type": "image/png",
+          "purpose": "any"
+        }
+      ]
+    }
+  ]
 }
