@@ -1,6 +1,6 @@
 // عامل الخدمة: يحفظ ملفات التطبيق للعمل بدون إنترنت.
 // ⚠️ غيّر رقم الإصدار مع كل تحديث لملفات الواجهة حتى يحصل المستخدمون على النسخة الجديدة.
-const VERSION = 'mylife-v1.8.0';
+const VERSION = 'mylife-v1.9.0';
 const SHELL = ['./', 'index.html', 'config.js', 'manifest.webmanifest', 'icon.svg', 'icon-192.png', 'icon-512.png'];
 
 self.addEventListener('install', (e) => {
@@ -63,7 +63,9 @@ self.addEventListener('notificationclick', (e) => {
     // بعض التنبيهات ليها مكان أدق من الرابط العام: «سجلت مصاريف النهارده؟» تفتح المصروف، والأمانة تفتح كشفها
     const tag = String(e.notification.data?.tag || e.notification.tag || '');
     const cust = tag.match(/^cust(?:neg|old):([0-9a-f-]{36})/);
-    const target = tag.startsWith('dlog:') ? './#/quick?a=expense' : cust ? './#/finance?tab=txns&account=' + cust[1] : (e.notification.data?.url || './');
+    const bal = tag.match(/^balmis:/), doc = tag.match(/^doc:([0-9a-f-]{36})/), mnt = tag.startsWith('mnt:'), wk = tag.startsWith('wsum:'), sub = tag.startsWith('subren:');
+    const target = tag.startsWith('dlog:') ? './#/quick?a=expense' : cust ? './#/finance?tab=txns&account=' + cust[1]
+      : doc ? './#/documents?id=' + doc[1] : mnt ? './#/maintenance' : wk ? './#/summary' : sub ? './#/subscriptions' : bal ? './#/capture' : (e.notification.data?.url || './');
     for (const c of list) { if ('focus' in c) { c.navigate(target); return c.focus(); } }
     return self.clients.openWindow(target);
   }));
